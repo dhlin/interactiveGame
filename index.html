@@ -44,8 +44,6 @@
         rawFile.send(null);
     }
 
-    // output functions are configurable.  This one just appends some text
-    // to a pre element.
     function outf(text) {
       var mypre = document.getElementById("output");
       mypre.innerHTML = mypre.innerHTML + text;
@@ -56,17 +54,11 @@
       return Sk.builtinFiles["files"][x];
     }
     
-    // Here's everything you need to run a python program in skulpt
-    // grab the code from your textarea
-    // get a reference to your pre element for output
-    // configure the output function
-    // call Sk.importMainWithBody()
     function runit(url) {
       getFile(function (resp) {
         document.getElementById("output").innerHTML = resp;
       }, url);
       var prog = document.getElementById("output").innerHTML;
-      //readTextFile();
       var mypre = document.getElementById("output");
       mypre.innerHTML = '';
       Sk.canvas = "mycanvas";
@@ -112,7 +104,7 @@
 
 <h3>
 <a id="2048" class="anchor" href="#2048" aria-hidden="true"><span class="octicon octicon-link"></span></a>2048</h3>
-<p style="text-align:center"><img src="http://img.appx4fun.com/28/84/51/ba530cb3-9ef7-4c4a-b10a-c9e861c897cf-logo.jpg" alt="2048" height="200" width="200"></p>
+<p style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/2048_promo_art.png" alt="2048" height="200" width="200"></p>
 <div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/2048/2048.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
@@ -123,13 +115,12 @@
 <h3>
 <a id="Pong" class="anchor" href="#Pong" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pong</h3>
 <p style="text-align:center"><img src="https://lh3.ggpht.com/HAGbanr1DyRNCA4bXJv7UalB8JkgrKajmNqnnfX84sqIcgNbfN2uGryUEp3RMQZ8OwtK=w300" alt="2048" height="200" width="200"></p>
-<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Pong/Pong.py')" type="button" style="text-align:center">Play</button></div>
+<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactivepython/master/week4/Pong.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="Memory" class="anchor" href="#Memory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory</h3>
 <p style="text-align:center"><img src="http://www.clusterbucket.com/images/memory-icon.jpg" alt="2048" height="200" width="200"></p>
-<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactivepython/master/week5/Memory.py')" type="button" style="text-align:center">Play</button></div>
-
+<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Memory/Memory.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="15" class="anchor" href="#15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fifteen Puzzle</h3>
