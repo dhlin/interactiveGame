@@ -13,6 +13,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
 
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+
     <script type="text/javascript">
       $(document).ready(function () {
         $('#main_content').headsmart()
@@ -56,9 +59,9 @@
     
     function runit(url) {
       getFile(function (resp) {
-        document.getElementById("output").innerHTML = resp;
+        document.getElementById("hcode").value = resp;
       }, url);
-      var prog = document.getElementById("output").innerHTML;
+      var prog = document.getElementById("hcode").value;
       var mypre = document.getElementById("output");
       mypre.innerHTML = '';
       Sk.canvas = "mycanvas";
@@ -109,31 +112,35 @@
 
 <h3>
 <a id="Blackjack" class="anchor" href="#Blackjack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blackjack</h3>
-<p style="text-align:center"><img src="http://www.friendspacepoker.com/wp-content/uploads/2014/11/Blackjack-Probabilities-and-Odds.png" alt="2048" height="200" width="200"></p>
+<p style="text-align:center"><img src="http://www.friendspacepoker.com/wp-content/uploads/2014/11/Blackjack-Probabilities-and-Odds.png" alt="Blackjack" height="200" width="200"></p>
 <div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Blackjack/Blackjack.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="Pong" class="anchor" href="#Pong" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pong</h3>
-<p style="text-align:center"><img src="https://lh3.ggpht.com/HAGbanr1DyRNCA4bXJv7UalB8JkgrKajmNqnnfX84sqIcgNbfN2uGryUEp3RMQZ8OwtK=w300" alt="2048" height="200" width="200"></p>
-<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactivepython/master/week4/Pong.py')" type="button" style="text-align:center">Play</button></div>
+<p style="text-align:center"><img src="https://lh3.ggpht.com/HAGbanr1DyRNCA4bXJv7UalB8JkgrKajmNqnnfX84sqIcgNbfN2uGryUEp3RMQZ8OwtK=w300" alt="Pong" height="200" width="200"></p>
+<div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Pong/Pong.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="Memory" class="anchor" href="#Memory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory</h3>
-<p style="text-align:center"><img src="http://www.clusterbucket.com/images/memory-icon.jpg" alt="2048" height="200" width="200"></p>
+<p style="text-align:center"><img src="http://www.clusterbucket.com/images/memory-icon.jpg" alt="Memory" height="200" width="200"></p>
 <div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Memory/Memory.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="15" class="anchor" href="#15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fifteen Puzzle</h3>
-<p style="text-align:center"><img src="http://cdn9.staztic.com/app/a/6564/6564227/coolfifteen-a-15-puzzle-game-2-l-280x280.png" alt="2048" height="200" width="200"></p>
+<p style="text-align:center"><img src="http://cdn9.staztic.com/app/a/6564/6564227/coolfifteen-a-15-puzzle-game-2-l-280x280.png" alt="15" height="200" width="200"></p>
 <div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/FifteenPuzzle/TheFifteenPuzzle.py')" type="button" style="text-align:center">Play</button></div>
 
 <h3>
 <a id="ttt" class="anchor" href="#ttt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tic-tac-toe</h3>
-<p style="text-align:center"><img src="https://cdn2.iconfinder.com/data/icons/large-svg-icons/512/tic-tac-toe_toe_tic_tac_play-512.png" alt="2048" height="200" width="200"></p>
+<p style="text-align:center"><img src="https://cdn2.iconfinder.com/data/icons/large-svg-icons/512/tic-tac-toe_toe_tic_tac_play-512.png" alt="ttt" height="200" width="200"></p>
 <div id="wrapper"><button onclick="runit('https://raw.githubusercontent.com/donghanglin/interactiveGame/master/Tic-tac-toe/Tic-Tac-Toe.py')" type="button" style="text-align:center">Play</button></div>
 
 
 <pre id="output" style="display:none"></pre>
+<textarea id="hcode" cols="40" rows="10" style="display:none">
+text
+</textarea><br />
+
       </section>
 
       <footer>
