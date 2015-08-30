@@ -1,2 +1,2 @@
 # interactiveGame
-some interactive game [demo](donghanglin.github.io/interactiveGame)
+some interactive game [demo](http://donghanglin.github.io/interactiveGame)
